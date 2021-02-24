@@ -4,6 +4,38 @@
              xmlns:local="clr-namespace:WPF_Selft_Test3"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="NumbersColor" Color="#444444"/>
+        <SolidColorBrush x:Key="OperatorsColor" Color="DarkOrange"/>
+        <SolidColorBrush x:Key="ForeGroundColor" Color="White"/>
+
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="NumberButtonStyle">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Trebuchet MS"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="OperatorButtonStyle" BasedOn="{StaticResource NumberButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource OperatorsColor}"/>
+            <Setter Property="BorderBrush" Value="OrangeRed"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="UtilButtonStyle" BasedOn="{StaticResource NumberButtonStyle}">
+            <Setter Property="Background" Value="Brown"/>
+            <Setter Property="BorderBrush" Value="DarkKhaki"/>
+            <Setter Property="Foreground" Value="{StaticResource ForeGroundColor}"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="55"/>
+        </Style>
     </Application.Resources>
 </Application>
