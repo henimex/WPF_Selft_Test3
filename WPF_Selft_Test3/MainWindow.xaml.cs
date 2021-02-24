@@ -59,9 +59,14 @@ namespace WPF_Selft_Test3
 
         private void BtnPercentage_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(ResultLabel.Content.ToString(), out _lastNumber))
+            double tempNumber;
+            if (double.TryParse(ResultLabel.Content.ToString(), out tempNumber))
             {
-                _lastNumber = _lastNumber / 100;
+                tempNumber = (tempNumber / 100);
+                if (_lastNumber != 0)
+                {
+                    tempNumber *= _lastNumber;
+                }
                 ResultLabel.Content = _lastNumber.ToString();
             }
         }
@@ -78,6 +83,8 @@ namespace WPF_Selft_Test3
         private void BtnAc_Click(object sender, RoutedEventArgs e)
         {
             ResultLabel.Content = "0";
+            _result = 0;
+            _lastNumber = 0;
         }
 
         private void NumberButton_Click(object sender, RoutedEventArgs e)
