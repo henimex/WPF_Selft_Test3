@@ -73,5 +73,17 @@ namespace ContactsApp
             }
 
         }
+
+        private void ListVContacts_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Contact selectedContact = (Contact)ListVContacts.SelectedItem;
+
+            if (selectedContact!=null)
+            {
+                ContactDetailsWindow detailWindow = new ContactDetailsWindow(selectedContact);
+                detailWindow.ShowDialog();
+                ReadDB();
+            }
+        }
     }
 }

@@ -12,10 +12,10 @@
             <Button x:Name="BtnNewContact" Content="New Contact" Click="BtnNewContact_OnClick" FontSize="20" FontWeight="DemiBold" Margin="2,10" Padding="5"/>
 
             <!--Searching-->
-            <TextBox Margin="0 5 0 5" TextChanged="TextBoxBase_OnTextChanged"/>
+            <TextBox Margin="0 5 0 5" TextChanged="TextBoxBase_OnTextChanged" FontSize="20" FontStyle="Italic"/>
 
             <!--Contact List-->
-            <ListView x:Name="ListVContacts" Margin="0 5 0 0" Height="300" BorderBrush="Black">
+            <ListView x:Name="ListVContacts" Margin="0 5 0 0" Height="300" BorderBrush="Black" SelectionChanged="ListVContacts_OnSelectionChanged">
                 <ListView.ItemTemplate>
 					<DataTemplate>
 						<StackPanel Orientation="Vertical" Margin="2">
