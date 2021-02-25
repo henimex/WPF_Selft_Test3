@@ -28,6 +28,9 @@ namespace ContactsApp
             TxtDetailName.Text = _contact.Name;
             TxtDetailEmail.Text = _contact.Email;
             TxtDetailPhone.Text = _contact.Phone;
+
+            Owner = Application.Current.MainWindow;
+            WindowStartupLocation = WindowStartupLocation.CenterOwner;
         }
 
         private void BtnUpdate_OnClick(object sender, RoutedEventArgs e)
@@ -54,6 +57,11 @@ namespace ContactsApp
             }
 
             Close();
+        }
+
+        private void BtnCancel_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

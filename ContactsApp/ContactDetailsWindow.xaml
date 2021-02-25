@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ContactsApp"
         mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
         Title="ContactDetailsWindow" Height="360" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Margin="10">
@@ -14,8 +16,9 @@
             <TextBox x:Name="TxtDetailEmail" Margin="0,0,0,5" FontSize="20"  />
             <Label Content="Phone Number" Margin="5"/>
             <TextBox x:Name="TxtDetailPhone" Margin="0,0,0,5" FontSize="20" />
-            <Button x:Name="BtnUpdate" Content="Update" Click="BtnUpdate_OnClick" FontSize="15" FontWeight="DemiBold" Margin="2,10" Padding="5" Background="ForestGreen" Foreground="White"/>
-            <Button x:Name="BtnDelete" Content="Delete" Click="BtnDelete_OnClick"  FontSize="15" FontWeight="DemiBold" Margin="2,10" Padding="5" Background="Firebrick" Foreground="White"/>
+            <Button x:Name="BtnUpdate" Content="Update" Click="BtnUpdate_OnClick" FontSize="15" FontWeight="DemiBold" Margin="2,2" Padding="5" Background="ForestGreen" Foreground="White"/>
+            <Button x:Name="BtnDelete" Content="Delete" Click="BtnDelete_OnClick"  FontSize="15" FontWeight="DemiBold" Margin="2,2" Padding="5" Background="Firebrick" Foreground="White"/>
+            <Button x:Name="BtnCancel" Content="Cancel" Click="BtnCancel_OnClick"  FontSize="15" Margin="2,2" Padding="5" Background="Gray" Foreground="Black"/>
         </StackPanel>
     </Grid>
 </Window>

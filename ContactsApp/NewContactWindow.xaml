@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ContactsApp"
         mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
         Title="NewContactWindow" Height="360" Width="300" WindowStartupLocation="CenterScreen"> 
     <Grid>
         <StackPanel Margin="10">
@@ -15,6 +17,7 @@
             <Label Content="Phone Number" Margin="5"/>
             <TextBox x:Name="TxtPhone" Margin="0,0,0,5" FontSize="20"/>
             <Button x:Name="BtnSave" Content="Save" Click="BtnSave_OnClick" FontSize="15" FontWeight="DemiBold" Margin="2,10" Padding="5"/>
+            <Button x:Name="BtnCancel" Content="Cancel" Click="BtnCancel_OnClick" FontSize="15" FontWeight="DemiBold" Margin="2,1" Padding="5"/>
         </StackPanel>
     </Grid>
 </Window>

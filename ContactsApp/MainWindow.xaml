@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ContactsApp"
+        xmlns:uc="clr-namespace:ContactsApp.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="400" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -14,8 +15,8 @@
             <!--Searching-->
             <TextBox Margin="0 5 0 5" TextChanged="TextBoxBase_OnTextChanged" FontSize="20" FontStyle="Italic"/>
 
-            <!--Contact List-->
-            <ListView x:Name="ListVContacts" Margin="0 5 0 0" Height="300" BorderBrush="Black" SelectionChanged="ListVContacts_OnSelectionChanged">
+            <!--Contact List V1-->
+            <!--<ListView x:Name="ListVContacts" Margin="0 5 0 0" Height="300" BorderBrush="Black" SelectionChanged="ListVContacts_OnSelectionChanged">
                 <ListView.ItemTemplate>
 					<DataTemplate>
 						<StackPanel Orientation="Vertical" Margin="2">
@@ -25,8 +26,21 @@
 						</StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
 
+            <!--Contact List V2-->
+            <ListView x:Name="ListVContacts" Margin="0 5 0 0" Height="300" BorderBrush="Black" SelectionChanged="ListVContacts_OnSelectionChanged">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <uc:ContactControl Contact="{Binding}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
     </Grid>
 </Window>
